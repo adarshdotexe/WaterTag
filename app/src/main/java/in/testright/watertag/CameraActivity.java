@@ -91,7 +91,7 @@ public class CameraActivity extends AppCompatActivity implements CameraBridgeVie
         Imgproc.findContours(mask, contours, hierarchey, Imgproc.RETR_LIST,
                 Imgproc.CHAIN_APPROX_SIMPLE);
         contours.sort((o1, o2) -> (int) (Imgproc.contourArea(o2) - Imgproc.contourArea(o1)));
-        Imgproc.drawContours(mRGBAT, contours, 0, new Scalar(255, 0, 0), 5, Imgproc.LINE_8, hierarchey, 2, new Point());
+        Imgproc.drawContours(mRGBAT, contours, 1, new Scalar(255, 0, 0), 5, Imgproc.LINE_8, hierarchey, 2, new Point());
 
         return mRGBAT;
     }
