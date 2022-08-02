@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/adars/StudioProjects/MyApplication/app/src/main/res/drawable-v24/ic_focus.xml" value="0.1935" />
         <entry key="..\:/Users/adars/StudioProjects/MyApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1935" />
         <entry key="..\:/Users/adars/StudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1935" />
         <entry key="..\:/Users/adars/StudioProjects/MyApplication/app/src/main/res/layout/2.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/adars/StudioProjects/MyApplication/app/src/main/res/layout/activity_camera.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/adars/StudioProjects/MyApplication/app/src/main/res/layout/activity_camera_java2.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/adars/StudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/adars/StudioProjects/MyApplication/app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="..\:/Users/testright/Downloads/WaterTag-source/app/src/main/res/layout/activity_camera.xml" value="0.3645833333333333" />
