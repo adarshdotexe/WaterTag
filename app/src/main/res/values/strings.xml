@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WaterTag</string>
+    <string name="app_logo">App Logo</string>
+    <string name="company_logo">Company Logo</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="capture">Capture</string>
+</resources>
