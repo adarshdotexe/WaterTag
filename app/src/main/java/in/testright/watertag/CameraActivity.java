@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat;
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.JavaCamera2View;
+import org.opencv.android.JavaCameraView;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
@@ -31,7 +32,7 @@ public class CameraActivity extends AppCompatActivity implements CameraBridgeVie
 
     private static final String TAG = "CameraActivity";
 
-    JavaCamera2View javaCameraView;
+    JavaCameraView javaCameraView;
     Mat mRGBA, mRGBAT;
     BaseLoaderCallback baseLoaderCallback = new BaseLoaderCallback(CameraActivity.this) {
         @Override
@@ -64,9 +65,10 @@ public class CameraActivity extends AppCompatActivity implements CameraBridgeVie
 
     @Override
     public void onCameraViewStarted(int width, int height) {
-        mRGBA = new Mat(height, width, CvType.CV_8UC4);
+        mRGBA = new Mat(width, height, CvType.CV_8UC4);
 
     }
+
 
     @Override
     public void onCameraViewStopped() {
@@ -90,9 +92,12 @@ public class CameraActivity extends AppCompatActivity implements CameraBridgeVie
         Mat hierarchey = new Mat();
         Imgproc.findContours(mask, contours, hierarchey, Imgproc.RETR_LIST,
                 Imgproc.CHAIN_APPROX_SIMPLE);
-        contours.sort((o1, o2) -> (int) (Imgproc.contourArea(o2) - Imgproc.contourArea(o1)));
-        Imgproc.drawContours(mRGBAT, contours, 1, new Scalar(255, 0, 0), 5, Imgproc.LINE_8, hierarchey, 2, new Point());
-
+        for (int i = 0; i < contours.size(); i++) {
+            double area = Imgproc.contourArea(contours.get(i));
+            if (area> 10000.0 && area< 50000) {
+                Imgproc.drawContours(mRGBAT, contours, i, new Scalar(255, 0, 0), 5, Imgproc.LINE_8, hierarchey, 2, new Point());
+            }
+        }
         return mRGBAT;
     }
 

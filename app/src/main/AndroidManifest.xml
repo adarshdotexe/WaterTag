@@ -27,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/Theme.WaterTag2"
             android:name="in.testright.watertag.CameraActivity"
             android:exported="true">
             <intent-filter>
